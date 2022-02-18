@@ -1,5 +1,7 @@
 body {
     margin: 0;
+	font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif; 
+
 }
 
 h1, h2, p {
@@ -33,7 +35,14 @@ header {
     color: white;
 }
 
-.section-one .btn {
+.section-two-link { 
+    color: black;
+}
+
+
+/* button styles */
+
+.btn-yellow {
     display: inline-block;
     padding: 12px 25px;
     background: #FFE600;
@@ -42,15 +51,11 @@ header {
     text-decoration: none;
 }
 
-.section-one .btn:hover, .section-one .btn:focus {
+.btn-yellow:hover {
     background: white;
 }
 
-.section-two a {
-    color: black;
-}
-
-.section-two .btn {
+.btn-black {
     display: inline-block;
     padding: 12px 25px;
     background: #000;
@@ -59,7 +64,7 @@ header {
     text-decoration: none;
 }
 
-.section-two .btn:hover, .btn:focus  {
+.btn-black:hover {
     background: #FFE600;
     color: black;
 }
