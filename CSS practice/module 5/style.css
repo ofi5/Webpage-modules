@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-size: 12px;
+}
+
+.heading {
+    text-align: center;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+    
+}
+
+.columns {
+    display: flex;
+   
+}
+
+img {
+    max-width: 700px;
+}
+
+.col2 {
+    background-color: grey;
+    color: white;
+}
+
+.column {
+    display: inline-block;
+  
+    margin: 2px;
+}
+
+.c1 {
+    width: 1000px;
+}
+
+.c3 {
+    width: 1000px;
+}
+
+.c5 {
+    width: 555px;
+}
