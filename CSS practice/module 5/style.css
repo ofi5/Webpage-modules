@@ -73,14 +73,16 @@ img {
 
 @media (max-width: 600px){
     .columns {
+        
+        align-items: center;
+        justify-content: space-around;
         flex-direction: column;
-        text-align: center;
+       
        
     }
     .column {
-        text-align: center;
        
-        justify-content: space-around;
+        
         width: 100%;
     }
 }
