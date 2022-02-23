@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
+
 header {
     background-color: #2E354F;
     color: #fff;
@@ -9,6 +10,7 @@ header {
 
 .heading {
     padding: 25px 0px;
+    text-align: center;
     
 }
 /* containers */
@@ -31,19 +33,23 @@ header {
 }
 
 .section1-heading {
-    color: #EF5839;
+    color: orange;
 }
 
 
 .section2-heading {
-    color: #EF5839;
+    color: white;
 }
 
 
 /* links */
 
 .link {
-    color: #EF5839;
+    color: orange;
+}
+
+.link:hover {
+    color:aquamarine 
 }
 
 .btn  {
@@ -63,12 +69,12 @@ header {
 
 .btn1 {
     color: white;
-    background-color: #EF5839;
+    background-color: orange;
     margin: 5px;
 }
 
 .btn2 {
-    color: #EF5839;
+    color: orange;
     background-color: white;
 }
 
