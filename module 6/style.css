@@ -58,7 +58,48 @@ a {
     text-decoration: none;
 }
 
-a:active, a:hover, a:focus {
-    text-decoration: underline;
+ a:hover {
+    
     color: darkcyan;
+}
+
+.current-page{
+    border-bottom: #707070 2px solid;
+    padding-bottom: 2px;
+    
+    
+}
+
+.current-page:hover {
+    color: #707070;
+}
+
+
+@media (min-width:800px) {
+
+    body {
+        
+        max-width: 80%;
+        margin: auto; 
+    }
+     header {
+         display: flex;
+         justify-content: space-evenly;
+         padding: 20px 20px;
+        border: #143774 2px solid;
+         align-items: center;
+         background-color: #f8f8f8;
+     }
+    
+
+     nav {
+         
+         width: 100%;
+         font-size: 0.8rem;
+         
+         
+         
+         
+         background-color: #f8f8f8;
+     }
 }
