@@ -15,6 +15,23 @@ h1 {
     
 }
 
+.subtitle {
+    color:#1792D2;
+    letter-spacing: 2.8px;
+    font-size: 0.75rem;
+    font-family: 'Ubuntu', sans-serif;
+   
+    margin: auto;
+    font-weight: bold;
+    padding: 0;
+   
+}
+
+h2 {
+    color: #143774;
+    font-size: 24px;
+}
+
 nav {
     
     font-size: 1rem;
@@ -30,9 +47,9 @@ p {
     
     font-size: 0.75rem;
     font-family: 'Ubuntu', sans-serif;
-    color:#1792D2 ;
+    color:#707070;
     margin: auto;
-    font-weight: bold;
+    
     padding: 0;
    
 }
@@ -78,7 +95,7 @@ a {
 @media (min-width:800px) {
 
     body {
-        border: #143774 2px solid;
+       
         max-width: 80%;
         margin: auto; 
     }
@@ -86,7 +103,7 @@ a {
          display: flex;
          justify-content: space-evenly;
          padding: 19px 20px;
-        border: #143774 2px solid;
+        
          align-items: center;
          background-color: #f8f8f8;
      }
@@ -102,4 +119,26 @@ a {
          
          background-color: #f8f8f8;
      }
+}
+
+main {
+    width: 65%;
+    margin: auto;
+    border: #143774 2PX solid;
+}
+.box {
+    display: flex;
+    justify-content:space-between;
+}
+
+.boxA {
+    width: 60%;
+}
+
+.boxB {
+    width: 30%;
+}
+
+.samantha {
+    width: 100%;
 }
