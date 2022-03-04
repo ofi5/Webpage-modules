@@ -1,6 +1,6 @@
 header {
     background-color: #F8F8F8;
-    padding-top: 2em;
+    padding-top: 20em;
     text-align: center;
 }
 
@@ -8,7 +8,7 @@ header {
 h1 {
     font-family: 'Lora', serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: #143774;
     padding: 0;
     margin: 0;
@@ -20,17 +20,26 @@ h1 {
     letter-spacing: 2.8px;
     font-size: 0.75rem;
     font-family: 'Ubuntu', sans-serif;
-   
     margin: auto;
     font-weight: bold;
     padding: 0;
    
 }
 
+
 h2 {
     color: #143774;
     font-size: 24px;
+    font-weight: 300;
+   
 }
+.subtitle2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 nav {
     
@@ -124,7 +133,7 @@ a {
 main {
     width: 65%;
     margin: auto;
-    border: #143774 2PX solid;
+   
 }
 .box {
     display: flex;
@@ -132,13 +141,117 @@ main {
 }
 
 .boxA {
-    width: 60%;
+    
+    width: 70%;
 }
 
 .boxB {
-    width: 30%;
+    width: 25%;
 }
 
-.samantha {
+.boxA2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.boxA3, .boxA4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.boxA22{
+    width: 70%;
+}
+
+.boxA32, .boxA42 {
+  
+    width: 70%;
+}
+
+.chair-box, .momos-box, .plant-box  {
+    
+    align-items:center;
+    margin: 0;
+    padding: 0%;
+    width: 20%;
+}
+
+
+.boxB {
+    
+
+}
+
+.boxB1 {
+    border: hsla(0, 0%, 92%, 1) solid 2px;
+    background-color: hsla(0, 0%, 92%, 1);
+    margin-bottom: 20px;
+}
+
+.boxB2 {
+    border: hsla(0, 0%, 92%, 1) solid 2px;
+    background-color:  hsla(0, 0%, 92%, 1);
+    
+}
+
+.boxB1-content, .boxB2-content {
+    margin: 20px;
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    color: #143774;
+    
+}
+
+
+/* Images */
+.samantha{
     width: 100%;
+}
+
+.face {
+    width:80%;
+    margin-bottom: 10px;
+
+}
+.momos {
+    
+    width: 100%;
+    margin: 0;
+    padding-bottom: 10px;
+    
+}
+
+.chair, .plant {
+    
+    width: 100%;
+    margin: 0;
+
+}
+
+
+.link1 {
+    text-decoration: underline;
+    color:#1792D2;
+}
+
+.face-box {
+    
+    text-align: center;
+}
+
+.blue-text1 {
+    color: #143774;
+    font-size: 10px;
+    
+}
+
+.blue-text2 {
+    color: #143774;
+    font-size: 14px;
+    text-align: left;
 }
