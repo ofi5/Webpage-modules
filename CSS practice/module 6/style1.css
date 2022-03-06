@@ -1,0 +1,95 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300 ;
+    font-size: 1rem;
+    margin: 0;
+}
+/* HEADER AND NAVIGATION */
+
+/* font-family: 'Lora', serif; */
+/* font-family: 'Ubuntu', sans-serif; */
+
+
+
+header {
+    background-color: #F8F8F8;
+    padding: 50px;
+    
+}
+
+
+.heading {
+    color: #143774;
+    font-size:1.5rem ;
+    margin: 0%;
+    font-weight: 400;
+}
+
+.subtitle {
+    color: #1792D2;
+    font-size: 0.62rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing:0.1em;
+    text-transform: uppercase;
+}
+.header-content {
+    display:flex;
+    justify-content: space-around;
+    
+    max-width: 800px;
+    margin:0 auto;
+    align-items: center;
+    
+}
+
+.heading-and-subtitle, .navi {
+    
+    text-align: center;
+}
+
+ .navi-flex{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    
+}
+
+.nav-pills {
+        padding: 1px 15px;
+
+}
+
+.nav-links {
+    text-decoration: none;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 700;
+    color: #717171;
+    font-size: 0.8rem;
+
+}
+
+
+
+.nav-links:hover, .nav-links:focus {
+    color: rgb(0, 195, 255);
+}
+
+.link-active {
+    border-bottom: 2px solid #717171;
+    padding-bottom: 2px;
+
+}
+
+.link-active:hover {
+    text-decoration: none;
+    color: #717171;
+}
+
+h1, h2, h3 {
+    font-family: 'lora', sans-serif;
+}
+
+
+/* Main and aside in body */
