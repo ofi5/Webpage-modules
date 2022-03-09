@@ -94,6 +94,28 @@ h1, h2, h3 {
 
 /* Main and aside in body */
 
+.container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border: #143774 2px solid;
+
+}
+
+.main-content {
+    width: 60%;
+}
+
+.aside-content {
+    width: 25%;
+}
+
+.girl-pic {
+    width: 100%;
+}
 
 /* footer */
 
@@ -106,7 +128,7 @@ footer {
     max-width: 700px;
     margin: auto;
     text-align: center;
-    color: #FFFFFF;
+    color:#EBEBEB;
     
     padding: 35px;
 
