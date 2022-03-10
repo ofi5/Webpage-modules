@@ -94,28 +94,60 @@ h1, h2, h3 {
 
 /* Main and aside in body */
 
+h2 {
+    color: #143774;
+    font-size: 24px;
+    font-weight: 300;
+   
+}
+
+.heading1 {
+    font-size: 1.2rem;
+}
+
+.heading2 {
+    font-size: 1.2rem;
+    color: #1792D2;
+}
+
 .container {
     max-width: 800px;
     margin: auto;
     display: flex;
-    align-items: center;
+    align-items:flex-start ;
     justify-content: space-between;
     padding: 20px 0;
-    border: #143774 2px solid;
+
+   
 
 }
 
 .main-content {
-    width: 60%;
+    width: 70%;
+    color:#717171;
 }
 
-.aside-content {
+.aside-box {
+    background-color: #717171;
     width: 25%;
+    
+    text-align: center;
+}
+.aside-content {
+    background-color: #F8F8F8;
+    margin: 20px;
 }
 
 .girl-pic {
     width: 100%;
+   
 }
+
+.aside-pic {
+    width: 80%;
+   
+}
+
 
 /* footer */
 
