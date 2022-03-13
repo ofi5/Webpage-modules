@@ -128,7 +128,7 @@ h2 {
 }
 
 .aside-box {
-    background-color: #717171;
+    background-color:#EBEBEB;
     width: 25%;
     
     text-align: center;
@@ -136,6 +136,7 @@ h2 {
 .aside-content {
     background-color: #F8F8F8;
     margin: 20px;
+    padding: 5px;
 }
 
 .girl-pic {
