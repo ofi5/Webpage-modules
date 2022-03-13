@@ -19,6 +19,7 @@ header {
     align-items: center;
     margin: auto;
     justify-content: space-evenly;
+    padding: 2em;
 }
 
 .heading-and-subtitle {
@@ -40,4 +41,108 @@ header {
     font-weight: 700;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+}
+
+ul {
+    display: flex;
+    margin:0;
+    padding:0;
+}
+
+.nav-pills {
+    padding: 0 1em;
+    list-style: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    
+}
+.nav-links {
+    text-decoration: none;
+    color: #717171;
+}
+
+.nav-links:hover, .nav-links:focus {
+color:#1792D2 ;
+}
+
+.link-active {
+    border-bottom: solid 1px #717171;
+    padding: 0.1em;
+}
+
+.link-active:focus, .link-active:hover {
+    color: #717171;
+}
+
+
+/* main */
+
+.body-flex {
+    max-width: 900px;
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+img {
+    width: 100%;
+    margin:10px;
+}
+
+.main-box {
+    display: flex;
+    padding: 10px;
+}
+
+aside {
+    padding: 10px;
+    width
+}
+
+.clock, .momos, .plant, .chair {
+    width: 35%;
+
+}
+
+.me, .momos2, .chair2, .plant2 {
+    width: 80%;
+    padding: 0;
+    
+}
+
+h2 {
+    font-size: 1rem;
+    color: #143774;
+}
+
+h3 {
+    font-size: 0.8rem;
+    color: #1792D2;
+    font-weight: 400;
+}
+
+.main-para {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: #717171;
+    
+}
+
+.aside-back {
+    background-color:#EBEBEB ;
+    padding: 10px;
+    
+    text-align: center;
+
+}
+
+.aside-front {
+    margin: 10px;
+    background-color: #F8F8F8;
+    padding: 10px;
 }
