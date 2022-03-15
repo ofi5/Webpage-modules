@@ -96,10 +96,17 @@ img {
     display: flex;
     padding: 10px;
 }
-
+main {
+    width:70%;
+}
 aside {
     padding: 10px;
-    width
+    width:25%;
+  
+}
+
+.aside-text {
+    font-size: 0.7rem;
 }
 
 .clock, .momos, .plant, .chair {
@@ -145,4 +152,32 @@ h3 {
     margin: 10px;
     background-color: #F8F8F8;
     padding: 10px;
+}
+
+/* footer */
+
+footer {
+    background-color: #143774;
+
+}
+
+.foot-content {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    color:#EBEBEB;
+    
+    padding: 35px;
+
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: 'Ubuntu', sans-serif; 
+    font-weight: 300;
+
+    
+    
 }
