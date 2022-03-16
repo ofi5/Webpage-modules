@@ -1,21 +1,37 @@
+body {
+
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 5%;
+    border: 15px solid silver;
+  
+}
 h1 {
     text-align: center;
 }
 
 .box1 {
-    margin: 0;
-    align-items: center;
-    text-align: center;
-    background-color: blueviolet;
-    color: white;
-    border: 2px solid red;
+    margin: auto;
     
+    text-align: center;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    color: lightgreen;
+
+    background-image: linear-gradient(
+  275deg,
+  hsl(240deg 100% 20%) 10%,
+  hsl(300deg 100% 55%) 150%
+
+);
 }
 
 
 .box1-content {
-    max-width: 70%;
-    margin: 0 auto;
+    max-width: 100%;
+    padding: 20px;
+
+    
    
     
 
@@ -23,19 +39,29 @@ h1 {
 
 #input-no {
     font-size: 100px;
+    margin: 0;
 }
 
 .box2 {
     margin: 0;
     align-items: center;
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color:black;
+    color: lightcoral;
     padding: 20px;
-    border: 2px solid red;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    
+   
     
 }
 
 span {
-    font-size: 20px;
+    font-size: 30px;
+}
+
+
+#length, #volume, #mass {
+    font-size: 1.4rem;
+
 }
