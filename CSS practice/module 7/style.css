@@ -16,7 +16,7 @@ h1 {
     text-align: center;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
-    color: white;
+    color: black;
     text;
 
     background-image: linear-gradient(
@@ -24,6 +24,7 @@ h1 {
   
   hsl(250deg 87% 61%) 24%,
   hsl(247deg 70% 65%) 46%,
+  hsl(150deg 40% 25%)
   
 );
 }
