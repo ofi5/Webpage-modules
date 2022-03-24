@@ -2,7 +2,7 @@ body {
     
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300 ;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0;
 }
 
@@ -19,7 +19,7 @@ header {
     align-items: center;
     margin: auto;
     justify-content: space-evenly;
-    padding: 2em;
+    padding: 1.5em;
 }
 
 .heading-and-subtitle {
@@ -36,10 +36,10 @@ header {
 
 .subtitle {
     color:#1792D2;
-    font-size: 0.55rem;
+    font-size: 0.72rem;
     margin: 0;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.15rem;
     text-transform: uppercase;
 }
 
@@ -52,7 +52,7 @@ ul {
 .nav-pills {
     padding: 0 1em;
     list-style: none;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 700;
     
 }
@@ -66,8 +66,8 @@ color:#1792D2 ;
 }
 
 .link-active {
-    border-bottom: solid 1px #717171;
-    padding: 0.1em;
+    border-bottom: solid 2px #717171;
+    padding: 0.15em;
 }
 
 .link-active:focus, .link-active:hover {
@@ -121,8 +121,10 @@ aside {
 }
 
 h2 {
+    font-family: 'Lora', serif;
     font-size: 1rem;
     color: #143774;
+    font-weight: 500;
 }
 
 h3 {
@@ -185,4 +187,11 @@ footer p {
 a {
     text-decoration: none;
     color: #1792D2;
+}
+
+.continue {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.7rem;
 }
