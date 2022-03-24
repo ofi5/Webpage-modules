@@ -181,3 +181,8 @@ footer p {
     
     
 }
+
+a {
+    text-decoration: none;
+    color: #1792D2;
+}
