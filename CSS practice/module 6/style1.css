@@ -1,7 +1,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300 ;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 0;
 }
 /* HEADER AND NAVIGATION */
@@ -13,7 +13,7 @@ body {
 
 header {
     background-color: #F8F8F8;
-    padding: 50px;
+    padding: 20px;
     
 }
 
@@ -27,17 +27,17 @@ header {
 
 .subtitle {
     color: #1792D2;
-    font-size: 0.62rem;
+    font-size: 0.75rem;
     margin: 0;
     font-weight: 700;
-    letter-spacing:0.1em;
+    letter-spacing:0.2em;
     text-transform: uppercase;
 }
 .header-content {
     display:flex;
     justify-content: space-between;
     
-    max-width:800px;
+    max-width:900px;
     margin:0 auto;
     align-items: center;
     
