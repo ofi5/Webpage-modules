@@ -5,10 +5,12 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
+    font-size: 2rem;
 }
 
 h1 {
     color: goldenrod;
+    font-size: 3rem;
 }
 
 #message-el {
@@ -26,4 +28,5 @@ button {
     border-radius: 2px;
     margin-bottom: 2px;
     margin-top: 2px;
+    font-size: 1rem;
 }
