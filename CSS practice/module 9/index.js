@@ -1,4 +1,5 @@
 let password1 = document.getElementById("pass1")
+let password2 = document.getElementById("pass2")
 
 charLargeArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
@@ -8,9 +9,32 @@ numArray = ["1","2","3","4","5","6","7","8","9","0"]
 
 specialCharArray = ["!","@","#","$","%","^","&","*","(",")"]
 
-function click() {
-    let randomPass = 25
+allArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","!","@","#","$","%","^","&","*","(",")"]
 
-    console.log(randomPass)
+
+
+function clickbtn() {
+    let charLarge = Math.floor(Math.random()*26);
+    let charSmall = Math.floor(Math.random()*26);
+    let num = Math.floor(Math.random()*10);
+    let specialChar = Math.floor(Math.random()*10)
+    // let allArrayChar = Math.floor(Math.random()*72)
+
+    let keyArray = ["charLarge"]
+
+    password1.textContent = ""
+
+    for (let i = 0; i < 10; i++) {
+        
+        let allArrayChar = allArray[Math.floor(Math.random()*72)]
+        password1.textContent += allArrayChar; 
+    }
+
+    password2.textContent = ""
+    
+    for (i = 0; i < 10; i++) {
+        let allArrayChar = allArray[Math.floor(Math.random()*72)]
+        password2.textContent += allArrayChar;
+    }   
 
 }
