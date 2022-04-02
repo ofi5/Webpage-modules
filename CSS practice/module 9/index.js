@@ -1,5 +1,7 @@
 let password1 = document.getElementById("pass1")
 let password2 = document.getElementById("pass2")
+let password3 = document.getElementById("pass3")
+let password4 = document.getElementById("pass4")
 
 charLargeArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
@@ -36,5 +38,20 @@ function clickbtn() {
         let allArrayChar = allArray[Math.floor(Math.random()*72)]
         password2.textContent += allArrayChar;
     }   
+
+    password3.textContent = ""
+
+    for (let i = 0; i < 10; i++) {
+        
+        let allArrayChar = allArray[Math.floor(Math.random()*72)]
+        password3.textContent += allArrayChar; 
+    }
+    password4.textContent = ""
+
+    for (let i = 0; i < 10; i++) {
+        
+        let allArrayChar = allArray[Math.floor(Math.random()*72)]
+        password4.textContent += allArrayChar; 
+    }
 
 }
