@@ -29,6 +29,7 @@ body {
 
 #box2 {
     padding: 50px;
+ 
 }
 
 #h1-color1 {
@@ -43,4 +44,24 @@ body {
     border-radius: 5px;
     font-size: 1.1rem;
     font-weight: bold;
+}
+
+#pass1, #pass2, #pass3, #pass4 {
+    background-color: rgb(20, 14, 100);
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    color: aliceblue;
+
+    
+    text-align: center;
+    border-radius: 10px;
+}
+
+#pass-row1, #pass-row2 {
+    display: flex;
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
+ 
 }
