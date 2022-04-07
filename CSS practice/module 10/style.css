@@ -1,4 +1,23 @@
-#input-el {
-    border: solid 2px green;
+body {
+    margin: 0;
+    padding: 10px;
+   
+}
+
+input {
     width: 100%;
+    border: solid 2px rgb(32, 99, 32);
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 4px;
+    
+}
+
+button {
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    background-color: rgb(32, 99, 32);
+    color: aliceblue;
+    font-size: 1.2rem;
 }
