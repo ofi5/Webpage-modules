@@ -6,7 +6,7 @@ body {
 
 input {
     width: 100%;
-    border: solid 2px rgb(32, 99, 32);
+    border: solid 2px rgb(35, 15, 216);
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 4px;
@@ -17,7 +17,28 @@ button {
     font-weight: bold;
     padding: 10px;
     border: none;
-    background-color: rgb(32, 99, 32);
+    background-color: rgb(35, 15, 216);
     color: aliceblue;
     font-size: 1.2rem;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li { font-weight: bold;
+    margin-top: 5px;
+
+}
+
+a { color: rgb(10, 104, 141);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(141, 10, 82);
 }
