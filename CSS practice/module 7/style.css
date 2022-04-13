@@ -52,8 +52,7 @@ h1 {
     background-color:black;
     color: lightsteelblue;
     padding: 20px;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
+    
     
    
     
@@ -67,4 +66,26 @@ span {
 #length, #volume, #mass {
     font-size: 1.4rem;
 
+}
+
+#input-val{
+
+    border: none;
+    width: 200px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 5px;
+    text-align: center;
+}
+
+#btn {
+    display: block;
+    border: none;
+    width: 200px;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: black;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
 }
