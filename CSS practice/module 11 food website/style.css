@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+
+/* nav */
+
+nav {
+    display: flex;
+    background-color: skyblue;
+    justify-content: space-around;
+}
+.nav-menu {
+    display: flex;
+    margin: 10px;
+}
+
+
+
+
+.menu-box {
+    /* box-sizing: border-box; */
+    width: 200px;
+    border: solid black 2px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.menu-img {
+ width: 100%;
+ padding: none;
+ margin: none;
+ border: solid 2px grey;
+ box-sizing: border-box;
+}
