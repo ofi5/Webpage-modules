@@ -1,21 +1,73 @@
 body {
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
 /* nav */
+#nav-box {
+    background-color: skyblue;
+    
+}
 
 nav {
     display: flex;
-    background-color: skyblue;
-    justify-content: space-around;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    
 }
+
+
+
+nav h1 {
+    width: 30%;
+    border: solid 2px black;
+    background-color: black;
+    color: skyblue;
+    text-align: center;
+    padding: 10px;
+}
+
+.search-bar {
+    display: flex;
+    
+    width: 250px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .nav-menu {
     display: flex;
-    margin: 10px;
+}
+
+.nav-menu-pills {
+    margin: 0 20px;
+    list-style: none;
+    font-weight: 700;
 }
 
 
+#search-bar-input{
+    border: none;
+    border-radius: 5px;
+    margin: none;
+    width: 200px;
+    height: 20px;
+
+}
+
+#btn {
+    border: double black 2px;
+    box-shadow: 1px 1px black;
+    padding: none;
+    margin: none;
+    background-color: grey;
+    border-radius: 5px;
+}
 
 
 .menu-box {
@@ -32,4 +84,50 @@ nav {
  margin: none;
  border: solid 2px grey;
  box-sizing: border-box;
+}
+
+
+/* body */
+
+.body-main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    border: solid 2px black;
+    margin: auto;
+}
+
+/* side-menu */
+
+.side-menu {
+
+    font-size: 2rem;
+    list-style: none;
+    padding-left: 0;
+    width: 20%;
+    border: solid 2px blue;
+    
+    
+    
+}
+
+.side-menu-keys {
+    align-items: center;
+    margin-bottom: 10px;
+    color: rgb(12, 133, 214);
+}
+
+/* main-menu */
+
+.main-menu {
+    display: flex;
+    border: solid 2px red;
+    width: 55%;
+
+}
+
+.cart-box {
+    border: solid 2px green;
+    width: 20%;
+
 }
