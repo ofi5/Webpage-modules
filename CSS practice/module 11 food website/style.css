@@ -69,6 +69,15 @@ nav h1 {
     border-radius: 5px;
 }
 
+.sub-heading {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: rgb(18, 144, 228);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
 
 .menu-box {
     /* box-sizing: border-box; */
@@ -86,7 +95,28 @@ nav h1 {
  box-sizing: border-box;
 }
 
+.name-pizza {
+    font-weight: bold ;
+    font-style: italic;
+    background-color: rgb(250, 134, 134);
+    padding: 4px;
+    text-align: center;
+}
 
+.price-text {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.cart-btn {
+    font-weight: bold;
+    border: solid rebeccapurple 2px;
+    border-radius: 5px;
+    font-style: italic;
+    background-color: rgb(106, 186, 240);
+    font-size: 1.2rem;
+    margin-left: 25px;
+}
 /* body */
 
 .body-main {
@@ -122,7 +152,7 @@ nav h1 {
 .main-menu {
     display: flex;
     border: solid 2px red;
-    width: 55%;
+    width: 100%;
 
 }
 
@@ -130,4 +160,8 @@ nav h1 {
     border: solid 2px green;
     width: 20%;
 
+}
+
+#check{
+    border: solid 2px yellow;
 }
