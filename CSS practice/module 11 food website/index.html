@@ -41,12 +41,13 @@
                 <div class="main-menu"> 
               
                     <div class="menu-box">
-                        <p class="name-pizza">⭐4.1</p>
-                        <img src="images/pizza1.jpg" class="menu-img">
-                        <p class="name-pizza">Cheese Margherita</p>
-                        <price class="price-text">Rs 250</price>
-                        <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
-                    
+                        <div class="card" id="item1">
+                            <p class="name-pizza">⭐4.1</p>
+                            <img src="images/pizza1.jpg" class="menu-img">
+                            <p class="name-pizza">Cheese Margherita</p>
+                            <price class="price-text">250</price>
+                            <button class="cart-btn" onclick="addToCart(item1)">Add to Cart</button>
+                        </div>    
                     </div>
                     <div class="menu-box">
                         <p class="name-pizza">⭐4.4</p>
@@ -228,11 +229,15 @@
             </div>
             <div class="cart-box">
             <!-- cart -->
-            <p id="cart">NO ITEMS IN YOUR CART</p>
+            <p id="cart">CART</p>
+            <div id="total"> </div>
             </div>
+
+                
         </div>
         <footer>
 
         </footer>
+        <script src="index.js"></script>
     </body>
 </HTML>

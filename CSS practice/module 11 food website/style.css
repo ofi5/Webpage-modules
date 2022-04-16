@@ -165,3 +165,25 @@ nav h1 {
 #check{
     border: solid 2px yellow;
 }
+
+.cartImg > img{
+    width: 50px;
+    border: solid 2px green;
+    
+}
+
+.cartImg {
+    border: solid black 2px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+   
+}
+
+.cartImg > span {
+    
+    margin: 3px;
+}
+
+
