@@ -8,6 +8,9 @@ body {
 /* nav */
 #nav-box {
     background-color: skyblue;
+    position: fixed;
+    width: 100%;
+    display: block;
     
 }
 
@@ -125,6 +128,8 @@ nav h1 {
     max-width: 1500px;
     border: solid 2px black;
     margin: auto;
+    padding-top: 120px;
+
 }
 
 /* side-menu */
