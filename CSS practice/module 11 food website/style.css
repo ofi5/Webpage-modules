@@ -96,8 +96,12 @@ nav h1 {
  margin: none;
  border: solid 2px grey;
  box-sizing: border-box;
+ transform: scale(0.9);
 }
 
+.menu-img:hover {
+    transform: scale(1);
+}
 .name-pizza {
     font-weight: bold ;
     font-style: italic;
