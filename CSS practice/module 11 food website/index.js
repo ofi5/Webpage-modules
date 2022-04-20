@@ -21,7 +21,7 @@ function addToCart(item) {
     price.innerText = item.children[3].textContent;
 
     let cartEl = document.getElementById("cart");
-    let cartPage = document.getElementById("cart-page")
+    
   
 
   
@@ -32,7 +32,7 @@ function addToCart(item) {
     
 
 
-   totalEl.textContent = Number(price.innerText);
+    totalEl.textContent = Number(price.innerText);
     localStorage.setItem("key", "hello");
     console.log(localStorage.getItem("key"))
    

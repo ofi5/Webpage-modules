@@ -100,7 +100,7 @@ nav h1 {
 }
 
 .menu-img:hover {
-    transform: scale(1);
+    transform: scale(1.2);
 }
 .name-pizza {
     font-weight: bold ;
@@ -173,6 +173,7 @@ nav h1 {
 
 #check{
     border: solid 2px yellow;
+    
 }
 
 .cartImg > img{
