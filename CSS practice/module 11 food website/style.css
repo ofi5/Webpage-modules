@@ -11,6 +11,7 @@ body {
     position: fixed;
     width: 100%;
     display: block;
+    z-index: 1;
     
 }
 
@@ -36,7 +37,6 @@ nav h1 {
 
 .search-bar {
     display: flex;
-    
     width: 250px;
     align-items: center;
     justify-content: space-between;
@@ -79,6 +79,7 @@ nav h1 {
     padding: 10px;
     text-align: center;
     color: white;
+    box-sizing: border-box;
 }
 
 
@@ -133,6 +134,7 @@ nav h1 {
     border: solid 2px black;
     margin: auto;
     padding-top: 120px;
+    
 
 }
 
@@ -145,9 +147,6 @@ nav h1 {
     padding-left: 0;
     width: 20%;
     border: solid 2px blue;
-    
-    
-    
 }
 
 .side-menu-keys {
@@ -159,9 +158,11 @@ nav h1 {
 /* main-menu */
 
 .main-menu {
-    display: flex;
+    display:flex;
+    flex-wrap:wrap;
     border: solid 2px red;
     width: 100%;
+    
 
 }
 
@@ -173,6 +174,8 @@ nav h1 {
 
 #check{
     border: solid 2px yellow;
+    width: 80%;
+    
     
 }
 
