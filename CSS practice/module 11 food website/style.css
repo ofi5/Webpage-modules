@@ -111,6 +111,13 @@ nav h1 {
     text-align: center;
 }
 
+.rating {
+    font-weight: bold;
+    text-align: left;
+    font-style: italic;
+    background-color: lavender;
+}
+
 .price-text {
     font-weight: bold;
     font-style: italic;
