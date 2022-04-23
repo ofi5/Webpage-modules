@@ -121,5 +121,9 @@ function displayItems(){
 
 displayItems();
 
+const categoryData = [...new Map(foodItems.map(item => [item['category'],item.name])).values()];
+
+console.log(categoryData)
+
 
     
