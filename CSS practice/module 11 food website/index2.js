@@ -121,9 +121,22 @@ function displayItems(){
 
 displayItems();
 
-const categoryData = [...new Map(foodItems.map(item => [item['category'],item.name])).values()];
+const categoryData = (foodItems.map(item => [item.category,item]));
 
-console.log(categoryData)
+console.log(categoryData);
+
+
+document.querySelectorAll(".cart-btn").forEach(item => {
+    item.addEventListener("click", addToCart)
+})
+
+let cartData = [];
+
+function addToCart() {
+
+    let itemToAdd = this.parentNode.childNodes[2].innerText;
+    console.log(itemToAdd);
+}
 
 
     
