@@ -134,9 +134,77 @@ let cartData = [];
 
 function addToCart() {
 
+
+
     let itemToAdd = this.parentNode.childNodes[2].innerText;
     console.log(itemToAdd);
+
+    let itemObj = foodItems.find(element => element.name === itemToAdd);
+
+    let index = cartData.indexOf(itemObj);
+
+    if (index === -1) {
+
+        cartData = [...cartData, itemObj];
+
+
+    } else if (index > -1) {
+        itemObj.quantity += 1;
+    }
+
+    console.log(cartData)
+
+    cartItems();
 }
+
+function cartItems() {
+    let tableBody = document.getElementById("table-body");
+    tableBody.innerHTML= '';
+
+    cartData.map(item =>{
+
+        let tableRow = document.createElement("tr");
+
+        let rowData1 = document.createElement("td");
+        let img = document.createElement("img");
+        img.setAttribute("class","cart-box-img");
+        img.src = item.img;
+        rowData1.appendChild(img);
+
+        let rowData2 = document.createElement("td");
+        rowData2.innerText = item.name;
+
+        let rowData3 = document.createElement("td");
+        
+        let btn1 = document.createElement("button");
+        btn1.setAttribute("class","decrease-item");
+        btn1.innerText = "-";
+
+        let span = document.createElement("span");
+        span.innerText = item.quantity;
+
+        let btn2 = document.createElement("button");
+        btn2.setAttribute("class", "increase-item");
+        btn2.innerText="+";
+
+        rowData3.appendChild(btn1);
+        rowData3.appendChild(span);
+        rowData3.appendChild(btn2);
+
+        let rowData4 = document.createElement("price");
+        rowData4.innerText = item.price;
+
+        tableRow.appendChild(rowData1);
+        tableRow.appendChild(rowData2);
+        tableRow.appendChild(rowData3);
+        tableRow.appendChild(rowData4);
+
+        tableBody.appendChild(tableRow);
+
+    })
+
+}
+
 
 
     

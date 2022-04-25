@@ -91,7 +91,7 @@ nav h1 {
     margin: 10px;
 }
 
-.menu-img {
+.menu-img, .cart-box-img {
  width: 100%;
  padding: none;
  margin: none;
@@ -207,3 +207,32 @@ nav h1 {
 }
 
 
+#cart-title, #total-amount {
+    text-align: center;
+    font-weight: bold;
+    background-color: brown;
+    width: 40%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.cart-toggle {
+    /* display: none; */
+}
+
+#cart-items table {
+    width:80%;
+    margin:auto;
+    background-color: bisque;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cart-box-img {
+    width: 100px;
+    padding: none;
+    margin: none;
+    border: solid 2px grey;
+    box-sizing: border-box;
+    transform: scale(0.9);
+   }
