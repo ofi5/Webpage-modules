@@ -177,6 +177,8 @@ nav h1 {
 .cart-box {
     border: solid 2px green;
     width: 20%;
+    
+    
 
 }
 
@@ -229,12 +231,17 @@ nav h1 {
 
 }
     #cart-items table {
-    width:80%;
+    width:60%;
     margin:auto;
     background-color: bisque;
     text-align: center;
     font-weight: bold;
+    /* border: darkblue 2px dotted; */
     
+}
+
+#cart-items td {
+    border: darkblue solid 2px;
 }
 
 .cart-box-img {
@@ -250,3 +257,28 @@ nav h1 {
    .toggle-display {
        display: none;
    }
+
+#total-amt {
+    width: 60%;
+    padding-right: 50px;
+    margin:10px auto;
+    text-align: right;
+    font-size: 1.3rem;
+    color:antiquewhite;
+    background-color: grey;
+    box-sizing: border-box;
+    
+}
+
+#checkout-btn {
+    
+    border: none;
+    padding: 5px;
+    background-color: rgb(199, 13, 13);
+    color: white;
+    border-radius: 5px;
+    font-size: 2rem;
+    margin: auto;
+    display: block;
+}
+    

@@ -6,7 +6,8 @@ const foodItems = [
         price:200 ,
         category:"Veg",
         rating: 4.2 ,
-        quantity: 1
+        quantity: 1,
+        cost:1
     },
 
 
@@ -17,7 +18,8 @@ const foodItems = [
         price: 250,
         category:"Veg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     }
 ,
     {
@@ -27,7 +29,8 @@ const foodItems = [
         price: 250,
         category:"Veg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:4 ,
         name:"Paneer Tikka" ,
@@ -35,7 +38,8 @@ const foodItems = [
         price: 250,
         category:"Veg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:5 ,
         name:"Veggie Paradise" ,
@@ -43,7 +47,8 @@ const foodItems = [
         price: 250,
         category:"Veg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:6 ,
         name:"Veg Extravaganza" ,
@@ -51,7 +56,8 @@ const foodItems = [
         price: 250,
         category:"Veg",
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:7 ,
         name:"Mexican Green Wave" ,
@@ -59,7 +65,8 @@ const foodItems = [
         price: 250,
         category:"Veg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:8 ,
         name:"Paneer Makhni" ,
@@ -67,7 +74,8 @@ const foodItems = [
         price: 250,
         category:"Veg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:9 ,
         name:"Golden Delight" ,
@@ -75,7 +83,8 @@ const foodItems = [
         price: 250,
         category:"NonVeg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:10 ,
         name:"Chicken Sausage" ,
@@ -83,7 +92,8 @@ const foodItems = [
         price: 250,
         category:"NonVeg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:11 ,
         name:"Chunky Chicken" ,
@@ -91,7 +101,8 @@ const foodItems = [
         price: 250,
         category:"NonVeg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:12 ,
         name:"Chicken Dominator" ,
@@ -99,7 +110,8 @@ const foodItems = [
         price: 250,
         category:"NonVeg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:13 ,
         name:"Chicken Tikka" ,
@@ -107,7 +119,8 @@ const foodItems = [
         price: 250,
         category:"NonVeg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:14 ,
         name:"Non Veg Supreme" ,
@@ -115,7 +128,8 @@ const foodItems = [
         price: 250,
         category:"NonVeg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:15 ,
         name:"Pepper Barbeque" ,
@@ -123,7 +137,8 @@ const foodItems = [
         price: 250,
         category:"NonVeg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:16 ,
         name:"Barbeque and Onion" ,
@@ -131,7 +146,8 @@ const foodItems = [
         price: 250,
         category:"NonVeg" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:17 ,
         name:"Cake" ,
@@ -139,7 +155,8 @@ const foodItems = [
         price: 250,
         category:"Sides" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:18 ,
         name:"Garlic Bread" ,
@@ -147,7 +164,8 @@ const foodItems = [
         price: 250,
         category:"Sides" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:19 ,
         name:"Cream Mayonnaise" ,
@@ -155,7 +173,8 @@ const foodItems = [
         price: 250,
         category:"Sides" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     },{
         id:20 ,
         name:"Tandoori Mayonnaise" ,
@@ -163,7 +182,8 @@ const foodItems = [
         price: 250,
         category:"Sides" ,
         rating:4.3 ,
-        quantity:1
+        quantity:1,
+        cost:1
     }
 ]
 

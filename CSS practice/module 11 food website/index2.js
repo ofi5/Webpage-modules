@@ -140,6 +140,7 @@ document.querySelectorAll(".cart-btn").forEach(item => {
 })
 
 let cartData = [];
+let addItemId = 0;
 
 function addToCart() {
 
@@ -155,15 +156,47 @@ function addToCart() {
     if (index === -1) {
 
         cartData = [...cartData, itemObj];
+        itemObj.cost = itemObj.quantity*itemObj.price ; 
 
 
     } else if (index > -1) {
         itemObj.quantity += 1;
+        itemObj.cost = itemObj.quantity*itemObj.price ; 
     }
 
     console.log(cartData)
 
     cartItems();
+
+    addItemId += 1;
+    
+
+    let selectedItem = document.createElement("div");
+    selectedItem.classList.add("cartImg");
+    selectedItem.setAttribute("id", addItemId);
+
+    let img = document.createElement("img");
+    img.src = this.parentNode.childNodes[1].currentSrc;
+
+    let pizzaName = document.createElement("span");
+    pizzaName.textContent = this.parentNode.childNodes[2].textContent;
+
+    let price = document.createElement("span");
+    price.innerText = this.parentNode.childNodes[3].textContent;
+
+    let cartEl = document.getElementById("cart");
+    
+  
+
+  
+    selectedItem.append(img);
+    selectedItem.append(pizzaName);
+    selectedItem.append(price);
+    cartEl.append(selectedItem);
+    
+
+
+    
 }
 
 function cartItems() {
@@ -200,8 +233,8 @@ function cartItems() {
         rowData3.appendChild(span);
         rowData3.appendChild(btn2);
 
-        let rowData4 = document.createElement("price");
-        rowData4.innerText = item.price;
+        let rowData4 = document.createElement("td");
+        rowData4.innerText = item.cost;
 
         tableRow.appendChild(rowData1);
         tableRow.appendChild(rowData2);
@@ -211,11 +244,12 @@ function cartItems() {
         tableBody.appendChild(tableRow);
     })
 
-        document.querySelector(".decrease-item").addEventListener("click",decrementItem);
+        document.querySelectorAll(".decrease-item").forEach(item => {
+            item.addEventListener("click",decrementItem);})
 
-        document.querySelector(".increase-item").addEventListener("click",incrementItem);
+        document.querySelectorAll(".increase-item").forEach(item => {item.addEventListener("click",incrementItem);})
 
-        
+        totalAmt();
     
 
 }
@@ -234,9 +268,55 @@ function openCart() {
 
 
 function decrementItem() {
-    console.log("hello");
+    let decName = this.parentNode.parentNode.childNodes[1].innerText;
+    console.log(decName);
+
+    let decObj = cartData.find(item => item.name == decName);
+    console.log(decObj);
+
+    let indexOfObj = cartData.indexOf(decObj);
+
+    if (decObj.quantity === 1) {
+        cartData.splice(indexOfObj,1);
+        if (cartData.length === 0) {
+            document.getElementById("clear").classList.toggle("toggle-display");
+            document.getElementById("cart-items").classList.toggle("cart-toggle");
+            document.getElementById("cart-btn-menu").innerText = "Cart";
+            alert("Cart is Empty");
+           
+        }
+        
+
+    }else if (decObj.quantity>1) {
+        decObj.quantity -= 1;
+        decObj.cost= decObj.quantity*decObj.price;
+    }
+    cartItems();
+    totalAmt();
+
 }
 
 function incrementItem() {
-    console.log("sup");
+      
+        let incName = this.parentNode.parentNode.childNodes[1].innerText;
+        let incObj = cartData.find(item => item.name == incName);
+        incObj.quantity +=1;
+        incObj.cost = incObj.price*incObj.quantity;
+        cartItems(); 
+        totalAmt();
+
+
 }
+
+function totalAmt() {
+    let priceArray = cartData.map(item =>item.cost);
+    console.log(priceArray);
+    let totalAmount=0
+    for (let i=0; i<priceArray.length; i++) {
+        totalAmount += priceArray[i]
+    }
+    console.log(totalAmount)
+    document.getElementById("total-amt").innerHTML = "total: " + totalAmount;
+}
+
+totalAmt();
