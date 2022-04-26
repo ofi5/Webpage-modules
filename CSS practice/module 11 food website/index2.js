@@ -1,4 +1,11 @@
+
+
+
+
 import {foodItems} from "./fooditems.js";
+
+
+
 
 console.log(foodItems);
 
@@ -45,6 +52,8 @@ function displayItems(){
         menuBox.append(btn);
         
         veg.append(menuBox);
+
+       
 
         
     })
@@ -127,14 +136,14 @@ console.log(categoryData);
 
 
 document.querySelectorAll(".cart-btn").forEach(item => {
-    item.addEventListener("click", addToCart)
+    item.addEventListener("click", addToCart);
 })
 
 let cartData = [];
 
 function addToCart() {
 
-
+    document.getElementById("cart-btn-menu").innerHTML= "Items in Cart";
 
     let itemToAdd = this.parentNode.childNodes[2].innerText;
     console.log(itemToAdd);
@@ -200,11 +209,34 @@ function cartItems() {
         tableRow.appendChild(rowData4);
 
         tableBody.appendChild(tableRow);
-
     })
+
+        document.querySelector(".decrease-item").addEventListener("click",decrementItem);
+
+        document.querySelector(".increase-item").addEventListener("click",incrementItem);
+
+        
+    
 
 }
 
+document.getElementById("cart-btn-menu").addEventListener("click",openCart);
+
+function openCart() {
+    if (cartData.length > 0){
+    document.getElementById("cart-btn-menu").innerText = "Menu";
+    document.getElementById("clear").classList.toggle("toggle-display");
+    document.getElementById("cart-items").classList.toggle("cart-toggle");
+    }else {
+        alert("Cart is empty");
+    }
+}
 
 
-    
+function decrementItem() {
+    console.log("hello");
+}
+
+function incrementItem() {
+    console.log("sup");
+}
