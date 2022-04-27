@@ -139,8 +139,10 @@ document.querySelectorAll(".cart-btn").forEach(item => {
     item.addEventListener("click", addToCart);
 })
 
+
+
 let cartData = [];
-let addItemId = 0;
+
 
 function addToCart() {
 
@@ -164,37 +166,42 @@ function addToCart() {
         itemObj.cost = itemObj.quantity*itemObj.price ; 
     }
 
-    console.log(cartData)
-
+    console.log(cartData);
+    menuCart();
     cartItems();
 
-    addItemId += 1;
-    
+}
 
-    let selectedItem = document.createElement("div");
-    selectedItem.classList.add("cartImg");
-    selectedItem.setAttribute("id", addItemId);
-
-    let img = document.createElement("img");
-    img.src = this.parentNode.childNodes[1].currentSrc;
-
-    let pizzaName = document.createElement("span");
-    pizzaName.textContent = this.parentNode.childNodes[2].textContent;
-
-    let price = document.createElement("span");
-    price.innerText = this.parentNode.childNodes[3].textContent;
+function menuCart() {
 
     let cartEl = document.getElementById("cart");
-    
-  
+    cartEl.innerHTML='';
 
+    cartData.map(item => {
+
+        let selectedItem = document.createElement("div");
+        selectedItem.classList.add("cartImg");
+
+
+        let img = document.createElement("img");
+        img.src = item.img;
+
+        let pizzaName = document.createElement("span");
+        pizzaName.textContent = item.name;
+
+        let price = document.createElement("span");
+        price.innerText = item.price;
+
+        let qty = document.createElement("span");
+        qty.innerText = "x" + item.quantity;
   
     selectedItem.append(img);
     selectedItem.append(pizzaName);
     selectedItem.append(price);
+    selectedItem.append(qty);
     cartEl.append(selectedItem);
     
-
+    })
 
     
 }
@@ -292,6 +299,7 @@ function decrementItem() {
         decObj.cost= decObj.quantity*decObj.price;
     }
     cartItems();
+    menuCart();
     totalAmt();
 
 }
@@ -303,6 +311,7 @@ function incrementItem() {
         incObj.quantity +=1;
         incObj.cost = incObj.price*incObj.quantity;
         cartItems(); 
+        menuCart();
         totalAmt();
 
 
@@ -311,7 +320,7 @@ function incrementItem() {
 function totalAmt() {
     let priceArray = cartData.map(item =>item.cost);
     console.log(priceArray);
-    let totalAmount=0
+    var totalAmount=0
     for (let i=0; i<priceArray.length; i++) {
         totalAmount += priceArray[i]
     }
@@ -320,3 +329,73 @@ function totalAmt() {
 }
 
 totalAmt();
+
+
+document.getElementById("checkout-btn").addEventListener("click",checkout);
+
+let checkoutPage = document.getElementById("checkout-page");
+function checkout(){
+    document.getElementById("cart-items").classList.toggle("cart-toggle");
+    
+
+    let billing = document.createElement("h1");
+    billing.classList.add("class", "h1billing");
+    billing.innerText="Billing Details";
+    
+    let mainBox = document.createElement("div");
+    mainBox.classList.add("class", "main-box");
+
+    let billingBox = document.createElement("div");
+    billingBox.classList.add("class","bill-box");
+
+    let fullName = document.createElement("input");
+    fullName.classList.add("class","full-name");
+    document.writeln(br);
+
+    let address = document.createElement("input");
+    address.classList.add("class","address");
+
+    let contact = document.createElement("input");
+    contact.classList.add("class","contact");
+
+    let email = document.createElement("input");
+    email.classList.add("class","email");
+
+    let submit =document.createElement("button");
+    submit.classList.add("class","submit-btn");
+
+    let summaryBox = document.createElement("div");
+    summaryBox.classList.add("class","summary-box");
+
+    let orderSummary = document.createElement("h2");
+    orderSummary.classList.add("class","order-summary");
+    orderSummary.innerHTML= "Order Summary"
+
+    let totalBill = document.createElement("p");
+    totalBill.classList.add('class',"total-bill");
+    totalBill.innerHTML= 500;
+
+    
+
+
+
+
+
+    billingBox.append(fullName);
+    billingBox.append(address);
+    billingBox.append(contact);
+    billingBox.append(email);
+    billingBox.append(submit);
+
+    summaryBox.append(orderSummary);
+    summaryBox.append(totalBill);
+    
+    mainBox.append(billingBox);
+    mainBox.append(summaryBox);
+  
+
+    checkoutPage.append(billing);
+    checkoutPage.append(mainBox);
+
+
+}
