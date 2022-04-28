@@ -336,7 +336,8 @@ document.getElementById("checkout-btn").addEventListener("click",checkout);
 let checkoutPage = document.getElementById("checkout-page");
 function checkout(){
     document.getElementById("cart-items").classList.toggle("cart-toggle");
-    
+       
+   
 
     let billing = document.createElement("h1");
     billing.classList.add("class", "h1billing");
@@ -348,21 +349,37 @@ function checkout(){
     let billingBox = document.createElement("div");
     billingBox.classList.add("class","bill-box");
 
-    let fullName = document.createElement("input");
-    fullName.classList.add("class","full-name");
-    document.writeln(br);
+    let addressCaption = document.createElement("h3");
+    addressCaption.innerHTML="Add Address Details:";
 
+    let Oname = document.createElement("p");
+    Oname.innerText="Name: ";
+    var fullName = document.createElement("input");
+    fullName.setAttribute("type","text");
+    fullName.setAttribute('id',"fullname");
+    fullName.setAttribute('required','true');
+    fullName.classList.add("class","full-name");
+    
+
+    let Oaddress = document.createElement("p");
+    Oaddress.innerText="Address: ";
     let address = document.createElement("input");
     address.classList.add("class","address");
 
+    let Ocontact = document.createElement("p");
+    Ocontact.innerText="Contact: ";
     let contact = document.createElement("input");
     contact.classList.add("class","contact");
 
+    let Oemail = document.createElement("p");
+    Oemail.innerText="Email: ";
     let email = document.createElement("input");
     email.classList.add("class","email");
 
     let submit =document.createElement("button");
     submit.classList.add("class","submit-btn");
+    submit.innerText= "Submit";
+    submit.addEventListener("click",storeAddress);
 
     let summaryBox = document.createElement("div");
     summaryBox.classList.add("class","summary-box");
@@ -377,14 +394,16 @@ function checkout(){
 
     
 
-
-
-
-
+    billingBox.append(addressCaption);
+    billingBox.append(Oname);
     billingBox.append(fullName);
+    billingBox.append(Oaddress);
     billingBox.append(address);
+    billingBox.append(Ocontact);
     billingBox.append(contact);
+    billingBox.append(Oemail);
     billingBox.append(email);
+    
     billingBox.append(submit);
 
     summaryBox.append(orderSummary);
@@ -397,5 +416,23 @@ function checkout(){
     checkoutPage.append(billing);
     checkoutPage.append(mainBox);
 
+ 
+    
+}
+
+   
+let addressArray=[];
+
+function storeAddress() {
+    let namedata = document.getElementById("fullname");
+    if (namedata.value){
+    console.log(namedata.value);}
+    else {
+        alert("Name Required");
+    }
+addressArray.push(namedata);
+console.log(addressArray[0]);
 
 }
+
+
