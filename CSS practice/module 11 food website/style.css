@@ -314,6 +314,30 @@ nav h1 {
     padding:30px;
 }
 
+.total-bill {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: aliceblue;
+    background-color: black;
+    text-align: center;
+}
+
+.checkout-toggle {
+    display:none;
+    position: relative;
+}
+
+#heart {
+    float: right;
+}
+
+#heart:hover {
+    background-color: goldenrod;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
 
     
 

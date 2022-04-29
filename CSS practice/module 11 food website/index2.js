@@ -25,9 +25,14 @@ function displayItems(){
         menuBox.setAttribute("class", "menu-box");
 
 
-        let rating = document.createElement("p");
+        let rating = document.createElement("span");
         rating.setAttribute("class", "rating");
         rating.textContent = '⭐' + item.rating;
+
+        let heart = document.createElement("span");
+        heart.setAttribute('id', 'heart');
+        heart.addEventListener('click', wishlist);
+        heart.innerText = "❤️";
 
         let img = document.createElement("img");
         img.setAttribute("class","menu-img");
@@ -46,6 +51,7 @@ function displayItems(){
         btn.innerHTML="Add to Cart";
 
         menuBox.append(rating);
+        menuBox.append(heart);
         menuBox.append(img);
         menuBox.append(namePizza);
         menuBox.append(price);
@@ -66,6 +72,11 @@ function displayItems(){
         rating.setAttribute("class", "rating");
         rating.textContent = '⭐' + item.rating;
 
+        let heart = document.createElement("span");
+        heart.setAttribute('id', 'heart');
+        heart.addEventListener('click', wishlist);
+        heart.innerText = "❤️";
+
         let img = document.createElement("img");
         img.setAttribute("class", "menu-img");
         img.src = item.img;
@@ -83,6 +94,7 @@ function displayItems(){
         btn.innerHTML="Add to Cart";
 
         menuBox.append(rating);
+        menuBox.append(heart);
         menuBox.append(img);
         menuBox.append(namePizza);
         menuBox.append(price);
@@ -100,6 +112,11 @@ function displayItems(){
         rating.setAttribute("class", "rating");
         rating.textContent = '⭐' + item.rating;
 
+        let heart = document.createElement("span");
+        heart.setAttribute('id', 'heart');
+        heart.addEventListener('click', wishlist);
+        heart.innerText = "❤️";
+
         let img = document.createElement("img");
         img.setAttribute("class", "menu-img");
         img.src = item.img;
@@ -117,6 +134,7 @@ function displayItems(){
         btn.innerHTML="Add to Cart";
 
         menuBox.append(rating);
+        menuBox.append(heart);
         menuBox.append(img);
         menuBox.append(namePizza);
         menuBox.append(price);
@@ -325,7 +343,7 @@ function totalAmt() {
         totalAmount += priceArray[i]
     }
     console.log(totalAmount)
-    document.getElementById("total-amt").innerHTML = "total: " + totalAmount;
+    document.getElementById("total-amt").innerHTML = "Total Amount to be paid: " + totalAmount;
 }
 
 totalAmt();
@@ -354,27 +372,36 @@ function checkout(){
 
     let Oname = document.createElement("p");
     Oname.innerText="Name: ";
-    var fullName = document.createElement("input");
+    
+    let fullName = document.createElement("input");
     fullName.setAttribute("type","text");
     fullName.setAttribute('id',"fullname");
-    fullName.setAttribute('required','true');
     fullName.classList.add("class","full-name");
     
 
     let Oaddress = document.createElement("p");
     Oaddress.innerText="Address: ";
+    
     let address = document.createElement("input");
     address.classList.add("class","address");
+    address.setAttribute('id',"address");
+    address.setAttribute('type','text');
 
     let Ocontact = document.createElement("p");
     Ocontact.innerText="Contact: ";
+
     let contact = document.createElement("input");
     contact.classList.add("class","contact");
+    contact.setAttribute('type','number');
+    contact.setAttribute('id','contact');
 
     let Oemail = document.createElement("p");
     Oemail.innerText="Email: ";
+
     let email = document.createElement("input");
     email.classList.add("class","email");
+    email.setAttribute('id','email');
+    email.setAttribute('type','text');
 
     let submit =document.createElement("button");
     submit.classList.add("class","submit-btn");
@@ -390,7 +417,25 @@ function checkout(){
 
     let totalBill = document.createElement("p");
     totalBill.classList.add('class',"total-bill");
-    totalBill.innerHTML= 500;
+    totalBill.innerHTML= document.getElementById("total-amt").innerHTML;
+
+
+    let line1 = document.createElement("hr");
+
+
+    let paymentMethod = document.createElement("input");
+    paymentMethod.setAttribute("type",'radio');
+    
+    let CODlabel = document.createElement("label");
+    CODlabel.innerHTML="COD";
+
+    let orderBtn =document.createElement("button");
+    orderBtn.classList.add('id','order-btn');
+    orderBtn.addEventListener('click',orderComplete);
+    orderBtn.innerHTML = "Click to Order";
+
+
+
 
     
 
@@ -408,7 +453,11 @@ function checkout(){
 
     summaryBox.append(orderSummary);
     summaryBox.append(totalBill);
-    
+    summaryBox.append(line1);
+    summaryBox.append(paymentMethod);
+    summaryBox.append(CODlabel);
+    summaryBox.append(orderBtn);
+
     mainBox.append(billingBox);
     mainBox.append(summaryBox);
   
@@ -423,16 +472,60 @@ function checkout(){
    
 let addressArray=[];
 
-function storeAddress() {
-    let namedata = document.getElementById("fullname");
-    if (namedata.value){
-    console.log(namedata.value);}
-    else {
-        alert("Name Required");
-    }
-addressArray.push(namedata);
-console.log(addressArray[0]);
 
+
+// function to store user address 
+function storeAddress() {
+
+    let userData = {};
+
+    let namedata = document.getElementById("fullname");
+    let addressdata = document.getElementById("address");
+    let contactdata = document.getElementById("contact");
+    let emaildata = document.getElementById("email");
+
+    if (namedata.value && addressdata.value && contactdata.value && emaildata.value){
+    console.log(namedata.value);
+    console.log(addressdata.value);
+    console.log(contactdata.value);
+    console.log(emaildata.value);
+    userData.name=namedata.value;
+    userData.address=addressdata.value;
+    userData.contact=contactdata.value; 
+    userData.email=emaildata.value;
+    addressArray.push(userData);
+    }
+    else {
+        alert("input Required");
+    }
+
+    for (let i=0; i<addressArray.length; i++){
+    console.log(addressArray[i]);
+    console.log(addressArray.length);
+    }
 }
 
+function orderComplete() {
 
+    
+    let namedata = document.getElementById("fullname");
+    let addressdata = document.getElementById("address");
+    let contactdata = document.getElementById("contact");
+    let emaildata = document.getElementById("email");
+
+    if (namedata.value && addressdata.value && contactdata.value && emaildata.value){
+
+    
+    document.getElementById("checkout-page").classList.toggle("checkout-toggle");
+    document.getElementById("nav-box").classList.toggle("checkout-toggle");
+    document.getElementById("clear").classList.toggle("toggle-display");
+    location.reload();
+    alert("your order is complete.");
+
+
+    }
+}
+
+function wishlist() {
+    alert("Added to wishlist");
+}
