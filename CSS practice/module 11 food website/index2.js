@@ -166,7 +166,7 @@ function addToCart() {
 
     document.getElementById("cart-btn-menu").innerHTML= "Items in Cart";
 
-    let itemToAdd = this.parentNode.childNodes[2].innerText;
+    let itemToAdd = this.parentNode.childNodes[3].innerText;
     console.log(itemToAdd);
 
     let itemObj = foodItems.find(element => element.name === itemToAdd);
@@ -176,12 +176,12 @@ function addToCart() {
     if (index === -1) {
 
         cartData = [...cartData, itemObj];
-        itemObj.cost = itemObj.quantity*itemObj.price ; 
+         itemObj.cost = itemObj.quantity*itemObj.price ; 
 
 
     } else if (index > -1) {
-        itemObj.quantity += 1;
-        itemObj.cost = itemObj.quantity*itemObj.price ; 
+           itemObj.quantity += 1;
+           itemObj.cost = itemObj.quantity*itemObj.price ; 
     }
 
     console.log(cartData);
@@ -424,9 +424,11 @@ function checkout(){
 
 
     let paymentMethod = document.createElement("input");
+    paymentMethod.setAttribute('id','paymentMethod');
     paymentMethod.setAttribute("type",'radio');
     
     let CODlabel = document.createElement("label");
+    CODlabel.setAttribute('id',"COD");
     CODlabel.innerHTML="COD";
 
     let orderBtn =document.createElement("button");
@@ -484,6 +486,8 @@ function storeAddress() {
     let contactdata = document.getElementById("contact");
     let emaildata = document.getElementById("email");
 
+    
+
     if (namedata.value && addressdata.value && contactdata.value && emaildata.value){
     console.log(namedata.value);
     console.log(addressdata.value);
@@ -507,15 +511,15 @@ function storeAddress() {
 
 function orderComplete() {
 
-    
     let namedata = document.getElementById("fullname");
     let addressdata = document.getElementById("address");
     let contactdata = document.getElementById("contact");
     let emaildata = document.getElementById("email");
 
-    if (namedata.value && addressdata.value && contactdata.value && emaildata.value){
+    let checkvalue = document.getElementById("paymentMethod").checked;
 
-    
+    if (namedata.value && addressdata.value && contactdata.value && emaildata.value && checkvalue){
+
     document.getElementById("checkout-page").classList.toggle("checkout-toggle");
     document.getElementById("nav-box").classList.toggle("checkout-toggle");
     document.getElementById("clear").classList.toggle("toggle-display");
@@ -523,8 +527,10 @@ function orderComplete() {
     alert("your order is complete.");
 
 
-    }
-}
+
+}else {
+    alert("input Required");
+}}
 
 function wishlist() {
     alert("Added to wishlist");
