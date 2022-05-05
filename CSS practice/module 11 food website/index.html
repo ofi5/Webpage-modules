@@ -19,14 +19,14 @@
             <nav> 
                 <h1>Pizza Delivery Website</h1>
                 <div class="search-bar">
-                    <input id="search-bar-input">
-                    <button id="btn">🔍</button>
+                    <!-- <input id="search-bar-input"> -->
+                    <!-- <button id="btn">🔍</button> -->
                 </div>
                 <div >
                     <ul class="nav-menu">
-                        <li class="nav-menu-pills">offers</li>
-                        <li class="nav-menu-pills"><button id="cart-btn-menu">cart</button></li>
-                        <li class="nav-menu-pills">my account</li>
+                        <!-- <li class="nav-menu-pills">offers</li> -->
+                        <li class="nav-menu-pills" id="cart-btn-menu">Cart</li>
+                        <li class="nav-menu-pills">My Account</li>
                     </ul>
                 </div>
             </nav>
@@ -42,11 +42,16 @@
             <!--side menu  -->
             
             <ul class="side-menu">
-                <li class="side-menu-keys"><a href="#">Home</a></li>
-                <li class="side-menu-keys">Cart</li>
-                <li class="side-menu-keys"><a href="#">Your Orders</a></li>
-                <li class="side-menu-keys"><a href="#">Wishlist</a></li>
-                <li class="side-menu-keys"><a href="#">Help</a></li>
+                <!-- <li class="side-menu-keys"><a href="#">Home</a></li> -->
+                <!-- <li class="side-menu-keys" id="cart-btn-menu">Cart</li> -->
+                <!-- <li class="side-menu-keys"><a href="#">Your Orders</a></li> -->
+                <li class="side-menu-keys" id="wish">Wishlist</li>
+
+                <!-- <li class="side-menu-keys"><a href="#">Help</a></li> -->
+
+                <div id="wishlist">
+
+                </div>
             </ul>
 
             <!-- check -->
@@ -75,7 +80,7 @@
 
             <div class="cart-box">
             
-                <p id="cart">CART</p>
+                <p id="cart">CART ITEMS</p>
                 <div id="total"> </div>
             </div>
 
@@ -109,7 +114,7 @@
         </div>
 
 
-
+       
         <!-- footer -->
         <footer>
 

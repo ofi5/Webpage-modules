@@ -49,9 +49,12 @@ nav h1 {
 }
 
 .nav-menu-pills {
-    margin: 0 20px;
+    margin: 0 40px;
     list-style: none;
     font-weight: 700;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 0 8px;
 }
 
 
@@ -73,6 +76,19 @@ nav h1 {
     border-radius: 5px;
 }
 
+#cart-btn-menu:hover {
+    background-color: aquamarine;
+    
+    margin: 0 40px;
+    list-style: none;
+    font-weight: 700;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 0 8px;
+    
+    
+}
+
 .sub-heading {
     font-weight: bold;
     font-size: 1.5rem;
@@ -87,7 +103,7 @@ nav h1 {
 .menu-box {
     /* box-sizing: border-box; */
     width: 200px;
-    border: solid black 2px;
+    border: solid darkblue 2px;
     padding: 10px;
     margin: 10px;
 }
@@ -96,7 +112,7 @@ nav h1 {
  width: 100%;
  padding: none;
  margin: none;
- border: solid 2px grey;
+ border: solid 2px darkgreen;
  box-sizing: border-box;
  transform: scale(0.9);
 }
@@ -139,7 +155,7 @@ nav h1 {
     display: flex;
     justify-content: space-between;
     max-width: 1500px;
-    border: solid 2px black;
+    /* border: solid 2px black; */
     margin: auto;
     padding-top: 120px;
     
@@ -154,7 +170,9 @@ nav h1 {
     list-style: none;
     padding-left: 0;
     width: 20%;
-    border: solid 2px blue;
+    /* border: solid 2px blue; */
+    text-align: center;
+    text-decoration: none;
 }
 
 .side-menu-keys {
@@ -168,21 +186,23 @@ nav h1 {
 .main-menu {
     display:flex;
     flex-wrap:wrap;
-    border: solid 2px red;
+    /* border: solid 2px red; */
     width: 100%;
     
 
 }
 
 .cart-box {
-    border: solid 2px green;
+    margin-top: 24px ;
+     border: solid 2px darkblue;  
     width: 20%;
     position:sticky;
     top: 0;
+    text-align: center;
 }
 
 #check{
-    border: solid 2px yellow;
+    /* border: solid 2px yellow; */
     width: 80%;
     
     
@@ -199,9 +219,8 @@ nav h1 {
     display: flex;
     align-items: center;
     padding: 10px;
-    
-    
-   
+    border-radius: 15px;
+    margin-bottom: 5px;
 }
 
 .cartImg > span {
@@ -341,6 +360,14 @@ nav h1 {
     padding-right: 30px;
 }
 
+#namewish {
+    font-size: 1rem;
+}
+
+#rembtn {
+    font-size: 0.8rem;
+    margin-left: 30px;
+}
 
     
 

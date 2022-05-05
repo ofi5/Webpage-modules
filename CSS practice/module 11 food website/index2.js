@@ -148,9 +148,9 @@ function displayItems(){
 
 displayItems();
 
-const categoryData = (foodItems.map(item => [item.category,item]));
+// const categoryData = (foodItems.map(item => [item.category,item]));
 
-console.log(categoryData);
+// console.log(categoryData);
 
 
 document.querySelectorAll(".cart-btn").forEach(item => {
@@ -532,6 +532,78 @@ function orderComplete() {
     alert("input Required");
 }}
 
+
+// 9ol.(OL>)
+
+let wishlistData = [];
+let tempWish = []
+
 function wishlist() {
-    alert("Added to wishlist");
+    
+
+    let wishitem = this.parentNode.childNodes[3].innerText;
+
+    let wishitemObj = foodItems.find(item => item.name === wishitem);
+
+    let indx = wishlistData.indexOf(wishitemObj);
+
+    if  (indx === -1) {
+        wishlistData = [...wishlistData,wishitemObj];
+        tempWish = [wishitemObj];
+        alert("Added to wishlist");
+        console.log(wishlistData);
+        console.log(indx);
+        wishbox();  
+    } else {
+        alert ("Already in Wishlist")
+    }
+    
+
+}
+
+// document.getElementById("wish").addEventListener("click", wishbox);
+
+function wishbox() {
+ 
+        
+    // document.getElementById("clear").classList.toggle("toggle-display");
+    let wishpage = document.getElementById("wishlist");
+    
+    
+    tempWish.map(item => {
+
+            let selectedItem = document.createElement("span");
+            selectedItem.classList.add("cartImg");
+    
+    
+            let img = document.createElement("img");
+            img.src = item.img;
+    
+            let pizzaName = document.createElement("span");
+            pizzaName.setAttribute("id", "namewish");
+            pizzaName.textContent = item.name;
+             
+            let rembtn = document.createElement("span");
+            rembtn.setAttribute("id","rembtn");
+            rembtn.textContent = "❌";
+            rembtn.addEventListener("click", remitem);
+
+        selectedItem.append(img);
+        selectedItem.append(pizzaName);
+        selectedItem.append(rembtn);
+        wishpage.append(selectedItem);
+
+
+    })
+  tempWish = [];
+    
+}
+
+function remitem() {
+    
+
+    let deleteItem = this.parentNode;
+    deleteItem.remove();
+
+
 }
