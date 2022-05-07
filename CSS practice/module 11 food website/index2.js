@@ -601,6 +601,11 @@ function wishbox() {
 
 function remitem() {
     
+    let deletewish = this.parentNode.childNodes[1].innerHTML;
+    let deletewishObj = wishlistData.find(item => item.name === deletewish);
+    let deletewishindx = wishlistData.indexOf(deletewishObj);
+
+    wishlistData.splice(deletewishindx,1);
 
     let deleteItem = this.parentNode;
     deleteItem.remove();
