@@ -169,7 +169,7 @@ const foodItems = [
     },{
         id:19 ,
         name:"Cream Mayonnaise" ,
-        img: "images/_thumb_17450.png",
+        img: "images/thumb_17450.jpg",
         price: 250,
         category:"Sides" ,
         rating:4.3 ,
@@ -178,7 +178,7 @@ const foodItems = [
     },{
         id:20 ,
         name:"Tandoori Mayonnaise" ,
-        img: "images/_thumb_17451.png",
+        img: "images/thumb_17451.jpg",
         price: 250,
         category:"Sides" ,
         rating:4.3 ,

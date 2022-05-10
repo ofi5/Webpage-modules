@@ -599,6 +599,7 @@ function wishbox() {
     
 }
 
+
 function remitem() {
     
     let deletewish = this.parentNode.childNodes[1].innerHTML;
