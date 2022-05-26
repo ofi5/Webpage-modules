@@ -1,6 +1,6 @@
 
 let start = document.querySelector(".start");
-let gameArea = document.querySelector(".gameArea");
+const gameArea = document.querySelector(".gameArea");
 let score = document.querySelector("#score");
 
 
@@ -19,24 +19,34 @@ function startGame() {
     console.log(player);
     window.requestAnimationFrame(playGame);
     let car = document.createElement("div");
-    car.classList.add("class","car");
-    car.innerHTML = "Car go Zoooom !!"
+    car.setAttribute("class","car");
+     car.innerHTML = "Car go Zoom !!"
     console.log(player);
-    gameArea.append(car);
+    gameArea.appendChild(car);
     player.x = car.offsetLeft;
     player.y = car.offsetTop;
     console.log(player);
+    let road = gameArea.getBoundingClientRect();
+    console.log(car.getBoundingClientRect());
+    console.log(road);
+
 }
+    
 
 function playGame() {
     console.log("inplay");
     let userCar = document.querySelector(".car");
 
+    let road = gameArea.getBoundingClientRect();
+    console.log(road);
+    
+    
     if(player.ready){
-        if(keys.ArrowUp) {player.y +=player.speed};
-        if(keys.ArrowDown) {player.y -=player.speed};
-        if(keys.ArrowLeft) {player.x -=player.speed};
-        if(keys.ArrowRight) {player.x +=player.speed};
+        if(keys.ArrowUp && player.y < road.bottom-75) {player.y +=player.speed};
+        console.log(player);
+        if(keys.ArrowDown && player.y > road.top) {player.y -=player.speed};
+        if(keys.ArrowLeft && player.x > 0) {player.x -=player.speed};
+        if(keys.ArrowRight && player.x < 190) {player.x +=player.speed};
 
         userCar.style.bottom= player.y + "px";
         userCar.style.left = player.x + "px";
@@ -63,4 +73,3 @@ function keyOff(event) {
     keys[event.key] = false;
     console.log(keys);
 }
-
