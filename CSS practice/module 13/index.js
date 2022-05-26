@@ -20,7 +20,7 @@ function startGame() {
     window.requestAnimationFrame(playGame);
     let car = document.createElement("div");
     car.setAttribute("class","car");
-     car.innerHTML = "Car go Zoom !!"
+    car.innerHTML = "Car go Zoom !!"
     console.log(player);
     gameArea.appendChild(car);
     player.x = car.offsetLeft;
@@ -34,21 +34,21 @@ function startGame() {
     
 
 function playGame() {
-    console.log("inplay");
+    // console.log("inplay");
     let userCar = document.querySelector(".car");
 
     let road = gameArea.getBoundingClientRect();
-    console.log(road);
+    // console.log(road);
     
     
     if(player.ready){
-        if(keys.ArrowUp && player.y < road.bottom-75) {player.y +=player.speed};
+        if(keys.ArrowUp && player.y > road.y) {player.y -=player.speed};
         console.log(player);
-        if(keys.ArrowDown && player.y > road.top) {player.y -=player.speed};
+        if(keys.ArrowDown && player.y < road.height-75) {player.y +=player.speed};
         if(keys.ArrowLeft && player.x > 0) {player.x -=player.speed};
-        if(keys.ArrowRight && player.x < 190) {player.x +=player.speed};
+        if(keys.ArrowRight && player.x < road.width-50-10) {player.x +=player.speed};
 
-        userCar.style.bottom= player.y + "px";
+        userCar.style.top= player.y + "px";
         userCar.style.left = player.x + "px";
     window.requestAnimationFrame(playGame);
 }
