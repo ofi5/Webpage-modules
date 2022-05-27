@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>experiment</title>
+        <style>
+            .game {
+               
+                position: relative;
+                background-color: darkblue;
+                height: 100vh;
+                width:200px;
+                margin: auto;
+            }
+
+            .line {
+                top: 0px;
+                width: 10px;
+                height: 25px;
+                position: relative;
+                margin-left: 95px;
+              
+                background-color: aliceblue;
+
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="game">
+            Hello
+        </div>
+
+        <script>
+            let game = document.querySelector(".game");
+            game.style.background = "green";    
+                
+             for (let i=0; i<10; i++){
+                let line = document.createElement("div");
+                line.setAttribute("class","line");
+                
+                line.style.top = i*50 +"px";
+                game.appendChild(line);
+             }
+        </script>
+    </body>
+</html>

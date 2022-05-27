@@ -17,7 +17,18 @@ function startGame() {
     console.log('game started');
     player.ready = true;
     console.log(player);
+
+    for (let x=0; x<20; x++) {
+        let line = document.createElement("div");
+        line.setAttribute("class", "line");
+        line.y = x*40;
+        line.style.top = (x*40) +'px';
+        gameArea.appendChild(line);
+
+    }
     window.requestAnimationFrame(playGame);
+
+
     let car = document.createElement("div");
     car.setAttribute("class","car");
     car.innerHTML = "Car go Zoom !!"
@@ -39,6 +50,19 @@ function playGame() {
 
     let road = gameArea.getBoundingClientRect();
     // console.log(road);
+    let lines = document.querySelectorAll(".line");
+   
+    lines.forEach(function(item){
+    // {   console.log(item.y);
+        if (item.y > 120){
+            item.y-=200;
+        }
+        item.y += player.speed;
+        item.style.top += item.y +'px';
+        console.log(item.style.top);
+    
+    });    
+
     
     
     if(player.ready){
