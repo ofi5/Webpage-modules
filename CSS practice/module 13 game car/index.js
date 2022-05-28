@@ -26,7 +26,7 @@ function startGame() {
         gameArea.appendChild(line);
 
     }
-    window.requestAnimationFrame(playGame);
+    
 
 
     let car = document.createElement("div");
@@ -40,6 +40,7 @@ function startGame() {
     let road = gameArea.getBoundingClientRect();
     console.log(car.getBoundingClientRect());
     console.log(road);
+    window.requestAnimationFrame(playGame);
 
 }
     
@@ -70,7 +71,7 @@ function playGame() {
         console.log(player);
         if(keys.ArrowDown && player.y < road.height-75) {player.y +=player.speed};
         if(keys.ArrowLeft && player.x > 0) {player.x -=player.speed};
-        if(keys.ArrowRight && player.x < road.width-50-10) {player.x +=player.speed};
+        if(keys.ArrowRight && player.x < road.width-50) {player.x +=player.speed};
 
         userCar.style.top= player.y + "px";
         userCar.style.left = player.x + "px";
