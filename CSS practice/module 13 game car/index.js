@@ -52,16 +52,15 @@ function playGame() {
     let road = gameArea.getBoundingClientRect();
     // console.log(road);
     let lines = document.querySelectorAll(".line");
-   
+   console.log(lines);
     lines.forEach(function(item){
-    // {   console.log(item.y);
-        if (item.y > 120){
-            item.y-=200;
-        }
-        item.y += player.speed;
-        item.style.top += item.y +'px';
+        console.log(item.y);
+         if(item.y>760){
+             item.y -= 760;
+         }
+        item.y+=8;
+        item.style.top = item.y +'px';
         console.log(item.style.top);
-    
     });    
 
     
