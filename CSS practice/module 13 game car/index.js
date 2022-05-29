@@ -32,7 +32,8 @@ function startGame() {
         enemyCar.setAttribute("class","enemyCar");
         enemyCar.y = -1*(i*200);
         enemyCar.style.top = enemyCar.y + 'px';
-        enemyCar.style.left = Math.floor(Math.random()*200)+'px';    
+        enemyCar.x= 10;
+        enemyCar.style.left = Math.floor(Math.random()*190)+'px';    
         gameArea.append(enemyCar);
     }
 
@@ -55,14 +56,19 @@ function moveEnemy(){
     let enemy = document.querySelectorAll(".enemyCar");
     
     enemy.forEach(function(item){
-        console.log(item);
-            if (item.y>2000){
+        // console.log(item);
+            if (item.y>1000){
                 
-                item.y-=2000;
+                item.y-=1000;
+                item.style.left = Math.floor(Math.random()*190)+'px';
+                
             }
            
             
             item.y +=3;
+
+            
+
             item.style.top = item.y +'px';
             
             
