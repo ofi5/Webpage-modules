@@ -27,23 +27,49 @@ function startGame() {
 
     }
     
-
+    for (let i=0; i<5; i++) {
+        let enemyCar = document.createElement("div");
+        enemyCar.setAttribute("class","enemyCar");
+        enemyCar.y = -1*(i*200);
+        enemyCar.style.top = enemyCar.y + 'px';
+        enemyCar.style.left = Math.floor(Math.random()*200)+'px';    
+        gameArea.append(enemyCar);
+    }
 
     let car = document.createElement("div");
     car.setAttribute("class","car");
     car.innerHTML = "Car go Zoom !!"
-    console.log(player);
+   
     gameArea.appendChild(car);
     player.x = car.offsetLeft;
     player.y = car.offsetTop;
-    console.log(player);
+    
     let road = gameArea.getBoundingClientRect();
     console.log(car.getBoundingClientRect());
-    console.log(road);
+   
     window.requestAnimationFrame(playGame);
 
 }
+
+function moveEnemy(){
+    let enemy = document.querySelectorAll(".enemyCar");
     
+    enemy.forEach(function(item){
+        console.log(item);
+            if (item.y>2000){
+                
+                item.y-=2000;
+            }
+           
+            
+            item.y +=3;
+            item.style.top = item.y +'px';
+            
+            
+            
+
+    });
+}
 
 function playGame() {
     // console.log("inplay");
@@ -52,18 +78,18 @@ function playGame() {
     let road = gameArea.getBoundingClientRect();
     // console.log(road);
     let lines = document.querySelectorAll(".line");
-   console.log(lines);
+//    console.log(lines);
     lines.forEach(function(item){
-        console.log(item.y);
+        // console.log(item.y);
          if(item.y>760){
              item.y -= 760;
          }
         item.y+=8;
         item.style.top = item.y +'px';
-        console.log(item.style.top);
+        // console.log(item.style.top);
     });    
 
-    
+      moveEnemy();
     
     if(player.ready){
         if(keys.ArrowUp && player.y > road.y) {player.y -=player.speed};
