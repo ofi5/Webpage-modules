@@ -96,10 +96,11 @@ function playGame() {
     });    
 
       moveEnemy();
+      console.log(userCar.getBoundingClientRect());
     
     if(player.ready){
         if(keys.ArrowUp && player.y > road.y) {player.y -=player.speed};
-        console.log(player);
+        // console.log(player);
         if(keys.ArrowDown && player.y < road.height-75) {player.y +=player.speed};
         if(keys.ArrowLeft && player.x > 0) {player.x -=player.speed};
         if(keys.ArrowRight && player.x < road.width-50) {player.x +=player.speed};
@@ -121,11 +122,11 @@ let keys = {ArrowUp : false,
 function keyOn(event) {
     event.preventDefault();
     keys[event.key] = true;
-    console.log(keys);
+    // console.log(keys);
 }
 
 function keyOff(event) {
     event.preventDefault();
     keys[event.key] = false;
-    console.log(keys);
+    // console.log(keys);
 }
